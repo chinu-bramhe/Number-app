@@ -1,11 +1,23 @@
-.grid{
-   display: flex;
-   align-self: center;
-}
-.grid div:first-child{
-    width: 250px;
-    height: 50px;
 
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+ }
+
+.grid div:first-child{
+    font-size: medium; 
+    background-color:green;
+}
+.grid div:nth-child(2){
     font-size: medium;
-    text-align: center;
+    background-color:brown;
+}
+.grid div:nth-child(3){
+    font-size: medium;
+    background-color:yellow;
+}
+.grid div:last-child{
+    font-size: medium;
+    background-color:teal;
+
 }
