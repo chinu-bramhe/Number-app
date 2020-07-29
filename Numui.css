@@ -1,0 +1,11 @@
+.grid{
+   display: flex;
+   align-self: center;
+}
+.grid div:first-child{
+    width: 250px;
+    height: 50px;
+
+    font-size: medium;
+    text-align: center;
+}
