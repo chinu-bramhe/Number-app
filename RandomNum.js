@@ -12,15 +12,12 @@ class RandomNum extends Component {
     }
     onchangehandler=(e)=>{
        this.setState({
-            usernum:e.target.value.length > 3
-             ? e.target.value
-             : ""
+            usernum:e.target.value
        });
     };
     onclickHandler = (e) => {
         var min=1
         var max=100
-        
         var randomnum1=Math.floor(min+(Math.random()*(max-min)))
         this.setState({
            
@@ -33,38 +30,25 @@ class RandomNum extends Component {
         
             let difff=this.state.diff
             var ans=null
-            var num=null
-            var color=null
             if(difff===null)
             {
                 ans=""
-                num=0
-                color="white"
-
             }
             else if(difff === 0)
             {
                 ans="Correct"
-                num=1
-                color="Cyan"
             }
             else if(difff>0 && difff<10)
             {
                 ans="Hot"
-                num=2
-                color="Red"
             }
             else if(difff>10 && difff<30)
             {
                 ans="Warm"
-                num=3
-                color="Yellow"
             }
             else 
             {
                 ans="Cold"
-                num=4
-                color="Blue"
             }
         
         return (
@@ -77,7 +61,7 @@ class RandomNum extends Component {
            <div style={{borderBlock:"black",width:"300px",height:"50px",alignSelf:"center"}}>
                 <Button  type="submit" onClick={this.onclickHandler}>submit</Button>
            </div> 
-            <Rnum name={this.state.diff} tag={ans} num={num} colo={color} />       
+            <Rnum name={this.state.diff} tag={ans} />       
             </div>
         )
     }
